@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  font-size: 16px;
+  background-color: white;
+  border-bottom: 2px solid #dcdcdc;
+  padding: 30px;
+}
+.header .leftArrow {
+  font-size: 20px;
+  padding-right: 40px;
+  padding-top: 3px;
+}
+.header .dashBoard {
+  font-weight: lighter;
+}
+.header .rightArrow {
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+.header .socialFeed {
+  font-weight: bolder;
+}
+
+.leftNav {
+  width: 20vw;
+  height: 100vh;
+  position: fixed;
+  background-color: white;
+}/*# sourceMappingURL=Style.css.map */
