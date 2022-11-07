@@ -5,10 +5,10 @@ import "../style/Header.scss";
 function Header() {
     return(
         <div className='header'>
-            {/* <FontAwesomeIcon icon={faArrowLeft} className="leftArrow"/>
+            <FontAwesomeIcon icon={faArrowLeft} className="leftArrow"/>
             <div className='dashBoard'>Dashboard</div>
             <FontAwesomeIcon icon={faAngleRight} className="rightArrow"/>
-            <div className='socialFeed'>Social Feed</div> */}
+            <div className='socialFeed'>Social Feed</div>
         </div>
     )
 }

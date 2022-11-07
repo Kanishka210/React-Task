@@ -5,6 +5,8 @@ import Header from './component/Header'
 import LeftNav from './component/LeftNav'
 import RightNav from './component/RightNav'
 
+// import userinfo from './component/HeadingList'
+
 function App() {
       return(
           <div>

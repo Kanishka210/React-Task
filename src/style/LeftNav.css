@@ -3,4 +3,52 @@
   height: 100vh;
   position: fixed;
   background-color: white;
+  float: left;
+}
+
+.profile {
+  display: flex;
+  padding: 20px;
+}
+.profile .profilePhoto {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+.profile .profileName {
+  padding-left: 10px;
+  padding-top: 15px;
+}
+
+.headingName {
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px;
+}
+.headingName:hover {
+  color: white;
+  background-color: #801f56;
+  cursor: pointer;
+}
+.headingName .icon {
+  padding-left: 26px;
+  padding-right: 10px;
+}
+.headingName .name {
+  font-weight: 10px;
+  text-align: left;
+  padding-left: 20px;
+}
+.headingName .count {
+  display: flex;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+@media only screen and (max-width: 667px) {
+  .leftNav {
+    display: none;
+  }
 }/*# sourceMappingURL=LeftNav.css.map */
