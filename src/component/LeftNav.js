@@ -3,9 +3,9 @@ import "../style/LeftNav.scss";
 import Virat from "../component/Virat.jpg";
 import SideHeading from './SideHeading'
 import userinfo from './HeadingList'
-import Button from './Button';
-import userinformation from './RecentlyAdded'
-
+import SeeMore from './Button';
+import userinformation from './RecentlyAdded';
+import moreoption from "./MoreOptionData"
 
 function LeftNav(){
     return(
@@ -14,10 +14,15 @@ function LeftNav(){
             <img src={ Virat } alt="Profile" className='profilePhoto'/>
             <div className='profileName'><b>Virat Kohli</b></div>
             </div> 
-            {userinfo.map((props)=>{
-              return (<SideHeading key={props.id} icon={props.icon} name={props.name} count={props.count}/>)
+            {userinfo.map((menu)=>{
+              return (<SideHeading props={menu}/>)
             })}
-    
+            <SeeMore data = {moreoption}/>
+            <p>Recently added:</p>
+            {userinformation.map((menu) => {
+            return (<SideHeading props={menu}/>)
+        })}
+            <SeeMore data={moreoption}/>
         </div>
     )
 }

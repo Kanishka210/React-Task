@@ -1,12 +1,13 @@
 import React from 'react'
 function SideHeading(props){
+    const value=props.props;
     return(
         
             <div className='headingName'>
-                <div className='icon'>{props.icon}</div>
-                <div className='name'>{props.name}</div>
+                <div className='icon'>{value.icon}</div>
+                <div className='name'>{value.name}</div>
                 <div className='count'>
-                    <div>{props.count}</div>
+                    <div>{value.count}</div>
                 </div>
             </div>
         
