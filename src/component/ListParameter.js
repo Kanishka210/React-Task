@@ -45,4 +45,47 @@ const userinfo=[
         count:12,
     },
 ];
-export default userinfo;
+
+const userinformation=[
+    {
+      id:1,
+      icon:<FontAwesomeIcon icon={faFileLines}/>,
+      name: "New Artefacts",
+      count:82,
+  },
+  {
+      id:2,
+      icon:<FontAwesomeIcon icon={faFileLines}/>,
+      name: "New Modules",
+      count:42,
+  },
+  {
+      id:3,
+      icon:<FontAwesomeIcon icon={faFilePen}/>,
+      name: "New Skills",
+      count:23,
+  },
+];
+
+const moreoption=[
+    {
+        id:1,
+        icon:<FontAwesomeIcon icon={faFileLines}/>,
+        name: "Buzz home",
+        count:"",
+    },
+    {
+        id:2,
+        icon:<FontAwesomeIcon icon={faFileLines}/>,
+        name: "My Buzz name",
+        count:8,
+    },
+    {
+        id:3,
+        icon:<FontAwesomeIcon icon={faFilePen}/>,
+        name: "Draft names",
+        count:2,
+    },
+];
+
+export{userinfo, userinformation, moreoption}

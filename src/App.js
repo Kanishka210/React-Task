@@ -1,19 +1,25 @@
 //import React, { Component } from 'react'
 // import logo from './logo.svg';
+import React from 'react'
+import { useState } from 'react';
 import './App.css';
-import Header from './component/Header'
-import LeftNav from './component/LeftNav'
-import RightNav from './component/RightNav'
 
-// import userinfo from './component/HeadingList'
+import Header from './component/Header'
+import './style/LeftRightSide.scss';
+
+import LeftNavigation from './component/LeftNavigation'
+import RightNavigation from './component/RightNavigation';
+
 
 function App() {
+  const[display,setDisplay]=useState(false);
       return(
           <div>
-            <Header/>
-            <div>
-            <LeftNav/>
-            <RightNav/>
+            <Header setDisplay={setDisplay}/>
+           
+            <div className='leftright-side'>
+            <LeftNavigation display={display}/>
+            <RightNavigation/>
             </div>
           </div>
         );

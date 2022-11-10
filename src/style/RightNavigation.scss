@@ -1,0 +1,135 @@
+.right-navigation{
+    background-color: #d3d2d2;
+    width:80%;
+    margin-top: 5px;
+    float: right;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+    // padding-left:20px;
+    // padding-right: 20px;
+    
+.message{
+    background-color:white;
+    height:fit-content;
+    width:60%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-top:20px;
+    border-radius: 16px;
+    position: relative;
+    width: 75%;
+    
+    .profile-pic-input{
+        display:flex;
+        padding: 20px;
+    }
+    .profile-photo{
+        width:50px;
+        height:50px;
+        vertical-align: middle;
+        border-radius: 50%;
+    }
+    }
+    .icons{
+        display: flex;
+        font-size: 14px;
+        // flex:1;
+        margin:2px 18px 2px 50px;
+        justify-content: space-between;
+        margin-left: 40px;
+
+        .attachment{
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+         
+            .p{
+                margin:0px;
+                text-align: start;
+                margin-left: 2px;
+                margin-right: 20px;
+                padding: 10px 0px;
+                font-size: 15px;
+            }
+        
+        .icon{
+            margin-left: 30px;
+            align-items: center;
+            display: flex;
+            padding-left:10px;
+            margin-right: 10px;
+        }
+    }
+    }
+        input{
+            border-radius: 16px;
+            background-color: #dcdcdc;
+            border:none;
+            width:100%;
+            margin-left: 10px;
+            height:90%;
+            padding: 10px 10px;
+            
+            &:focus{
+                outline: none;
+            }
+        }
+        .post-card{
+            width:72%;
+            height:fit-content;
+            background-color: white;
+            padding:20px 12px 20px 24px ;
+            border-radius: 16px;
+            position: relative;
+        
+        .post{
+            display: flex;
+            justify-content: space-between;
+        }
+        .post-profile{
+            display: flex;
+        }
+        .profile-photo{
+            width:50px;
+            height:50px;
+            vertical-align: middle;
+            border-radius: 50%;
+        }
+        .post-profile-details{
+            font-size:12px;
+            margin-left:10px;
+        }
+    }
+    .content{
+        display: block;
+        font-size: 14px;
+        padding-top: 10px;
+    }
+
+        // .profile-info{
+        //         display: flex;
+        //         padding:20px;
+        
+     //     .profile-name{
+        //         padding-left: 10px;
+        //         padding-top: 15px;
+        //     }
+        //     .profile-detail{
+        //         display: block;
+        //         padding-top: 10px;
+        //     }
+        //     .profile-detail .profile-name{
+        //         flex-direction: column;
+        //     }
+        // }
+    }
+
+@media only screen and (max-width: 426px){
+    .right-navigation{
+        width: 100%;
+    }
+}

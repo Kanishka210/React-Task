@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons"
 import SideHeading from "./SideHeading";
 
-function SeeMore(props){
+function IsSeeMore(props){
     const value=props.data;
     const [buttonState, setButtonState]=useState(false);
     const buttonClicked =() =>{
@@ -14,11 +14,11 @@ function SeeMore(props){
             {buttonState && value.map((menu) =>{
                 return(<SideHeading props={menu}/>)
             })}
-            <button onClick={buttonClicked} >{buttonState ? "See Less" : "See More"}
-            {buttonState?<FontAwesomeIcon icon={ faChevronUp }></FontAwesomeIcon>:
-            <FontAwesomeIcon icon={faChevronDown}></FontAwesomeIcon>}</button>
+            <button onClick={buttonClicked} className="see-more">{buttonState ? "See less" : "See more"}
+            {buttonState?<FontAwesomeIcon icon={ faChevronUp } className="arrow-icon"></FontAwesomeIcon>:
+            <FontAwesomeIcon icon={faChevronDown} className="arrow-icon"></FontAwesomeIcon>}</button>
         </div>
     )
     
         }
-export default SeeMore;
+export default IsSeeMore;
