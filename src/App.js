@@ -1,28 +1,58 @@
-//import React, { Component } from 'react'
-// import logo from './logo.svg';
-import React from 'react'
-import { useState } from 'react';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
 
-import Header from './component/Header'
-import './style/LeftRightSide.scss';
+import Header from "./components/Header";
+import "./styles/panel.scss";
+import "./styles/RoutingWindow.scss";
 
-import LeftNavigation from './component/LeftNavigation'
-import RightNavigation from './component/RightNavigation';
-
+import LeftNavigation from "./components/LeftPanel/LeftNavigation";
+import RightNavigation from "./components/RightPanel/RightNavigation";
+import { Routes, Route } from "react-router-dom";
+import RoutingWindow from "./components/LeftPanel/RoutingWindow";
+import listParameter from "./components/LeftPanel/ListParameter";
+import recentlyAdded from "./components/LeftPanel/RecentlyAdded";
+// import { Value } from 'sass';
 
 function App() {
-  const[display,setDisplay]=useState(false);
-      return(
-          <div>
-            <Header setDisplay={setDisplay}/>
-           
-            <div className='leftright-side'>
-            <LeftNavigation display={display}/>
-            <RightNavigation/>
-            </div>
-          </div>
-        );
+  const [isMenubarClick, setIsMenubarClick] = useState(false);
+  const isToggle = () => {
+    setIsMenubarClick(!isMenubarClick);
+  };
+
+  return (
+    <div>
+      <Header setdisplay={isToggle} />
+
+      <div className="panel">
+        <LeftNavigation toggle={isMenubarClick} />
+        <Routes>
+          <Route
+            path="/"
+            element={<RightNavigation change={setIsMenubarClick} />}
+          />
+          {/* <Route path="/BuzzName" exact element={<RoutingComponent name="Buzz Name"/>}/> */}
+          {listParameter.map((post, index) => {
+            return (
+              <Route
+                path={post.url}
+                key={index}
+                element={<RoutingWindow paths={post.name} />}
+              />
+            );
+          })}
+          {recentlyAdded.map((post, index) => {
+            return (
+              <Route
+                path={post.url}
+                key={index}
+                element={<RoutingWindow paths={post.name} />}
+              />
+            );
+          })}
+        </Routes>
+      </div>
+    </div>
+  );
 }
 
 export default App;

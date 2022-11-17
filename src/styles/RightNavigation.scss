@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+$bg-color: gray;
+$border-color: black;
+$bgcolor: #cecdcd;
+$font-size: 12px;
+$fontsize: 14px;
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+.right-navigation {
+  background-color: $bgcolor;
+  width: 80%;
+  float: right;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  overflow-y: auto;
+  height: calc(100vh - 60px);
+}
+
+.message-card {
+  @extend .post-card;
+  margin-top: 20px;
+
+  .profile-pic-input {
+    display: flex;
+  }
+}
+.icons {
+  display: flex;
+  font-size: $fontsize;
+  flex: 1;
+  margin-left: 90px;
+  padding-bottom: 6px;
+  padding-right: 0px;
+  justify-content: space-between;
+
+  .attachment {
+    display: flex;
+    flex: 1;
+    align-items: center;
+  }
+  .icon {
+    align-items: center;
+    display: flex;
+    margin-right: 5px;
+    padding: 0px;
+  }
+}
+.profile-photo {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  border-radius: 50%;
+  border: 2px solid #801f56;
+}
+
+input {
+  border-radius: 16px;
+  background-color: #dcdcdc;
+  border: 2px solid #f1f1f4;
+  width: 90%;
+  margin-left: 10px;
+  height: 90%;
+  padding: 10px 10px;
+
+  &:focus {
+    outline: none;
+    background-color: #fee7f5;
+    border-color: #7a054f;
+  }
+}
+.post-card {
+  width: 65%;
+  height: fit-content;
+  background-color: white;
+  padding: 20px 12px 20px 24px;
+  border-radius: 16px;
+  position: relative;
+
+  .comment {
+    padding-top: 10px;
+  }
+
+  .post {
+    display: flex;
+    justify-content: space-between;
+  }
+  .post-profile {
+    display: flex;
+  }
+  .post-profile-details {
+    font-size: $font-size;
+    margin-left: 10px;
+  }
+  .profile-name {
+    font-size: $fontsize;
+    font-weight: bolder;
+  }
+  .designation {
+    font-size: $font-size;
+    font-weight: 500;
+  }
+  .posting-time {
+    font-size: $font-size;
+  }
+}
+.content {
+  display: block;
+  font-size: $font-size;
+  padding-top: 10px;
+}
+.plot {
+  cursor: pointer;
+}
+.delete-request {
+  font-size: $fontsize;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  // border-radius: 20px;
+}
+.pop-up-message {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.reject-delete,.accept-delete {
+  font-size: $font-size;
+  color: black;
+  border-radius: 20px;
+  padding: 10px 26px 10px;
+  border-color: $border-color;
+
+  &:hover {
+    background-color: $bg-color;
+    cursor: pointer;
+  }
+}
+
+
+@media only screen and (max-width: 576px) {
+  .right-navigation {
+    width: 100%;
+
+    .message {
+      //margin: 10px 10px;
+      width: 92%;
+      row-gap: 10px;
+      margin-bottom: 2px;
+      margin-top: 18px;
+      position: static;
+
+      .profile-photo {
+        width: 60px;
+        height: 50px;
+        vertical-align: middle;
+        border-radius: 50%;
+      }
+
+      .icons {
+        font-size: $font-size;
+        //margin-right:20px;
+        margin-left: 50px;
+        padding-right: 0px;
+        padding-left: 0px;
+        //width:50%;
+        flex: 1;
+        justify-content: space-between;
+        //margin: 0px 0px 0px 48px;
+      }
+
+      .icons-attachment {
+        font-size: 10px;
+        //padding-left: 10px;
+        padding-right: 50px;
+        padding-left: 10px;
+      }
+    }
+  }
+  .post-card {
+    width: 85%;
+  }
+}

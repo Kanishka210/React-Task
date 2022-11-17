@@ -1,0 +1,14 @@
+.routing-component {
+  display: flex;
+  width: 80%;
+  background-color: #cecdcd;
+  align-items: center;
+  justify-content: center;
+
+  .routing-component-link {
+    display: flex;
+    //    padding: 0px 500px;
+    font-size: 30px;
+    align-items: flex-start;
+  }
+}

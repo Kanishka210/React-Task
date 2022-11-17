@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+$bg-color: #801f56;
+$color: black;
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.left-navigation {
+  width: 20%;
+  background-color: white;
+  overflow-y: auto;
+  height: calc(100vh - 80px);
+  display: block;
+  float: left;
+  overflow-x: hidden;
+
+  @media only screen and (max-width: 576px) {
+    display: none;
+  }
+}
+.responsive-view {
+  @extend .left-navigation;
+}
+.profile {
+  display: flex;
+  padding: 18px;
+
+  .profile-photo {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    border-radius: 50%;
+    border: 2px solid $bg-color;
+  }
+
+  .profile-name {
+    padding-left: 12px;
+    padding-top: 18px;
+  }
+}
+.heading-name {
+  display: flex;
+  // font-weight: 500;
+  font-size: 14px;
+  padding: 10px;
+  justify-content: space-between;
+  font-weight: bold;
+
+  &:hover {
+    color: white;
+    background-color: $bg-color;
+    cursor: pointer;
+  }
+  // &:focus{
+  //     cursor: pointer;
+  //     color: white;
+  //     background-color: #801f56;
+  // }
+  .icon {
+    padding-left: 26px;
+    padding-right: 10px;
+    width: 5%;
+  }
+  .icon-feature {
+    display: flex;
+  }
+  .name {
+    font-weight: 10px;
+    text-align: left;
+    padding-left: 28px;
+  }
+  .count {
+    display: flex;
+    padding-right: 10px;
+    font-weight: lighter;
+  }
+}
+
+.see-more {
+  font-weight: bold;
+  padding-top: 10px;
+  padding-left: 50px;
+  margin-left: 34px;
+  margin-right: 20px;
+  padding-right: 58px;
+  border: none;
+  border-radius: 10px;
+  width: 80%;
+  background-color: #dcdcdc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: $bg-color;
+    cursor: pointer;
+  }
+}
+
+.arrow-icon {
+  margin-left: 4px;
+}
+p {
+  margin: 0px;
+  text-align: start;
+  margin-left: 24px;
+  margin-right: 20px;
+  padding: 10px 0px;
+  font-size: 16px;
+}
+
+.heading-name.default {
+  // text-underline: none;
+  display: flex;
+  align-items: center;
+  color: $color;
+  padding: 10px;
+  // display: flex;
+  font-size: 14px;
+  // padding: 10px;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.line {
+  // text-underline-offset: none;
+  text-decoration: none;
+  color: $color;
+}
+
+@media screen and (max-width: 576px) {
+  .responsive-view {
+    position: fixed;
+    display: block;
+    float: right;
+    right: 0;
+    overflow-y: auto;
+    height: calc(100vh - 80px);
+    width: 70%;
+    position: absolute;
+  }
+}
+.left-navigation::-webkit-scrollbar {
+  display: none;
+}

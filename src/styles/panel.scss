@@ -1,0 +1,8 @@
+.panel{
+    display: flex;
+}
+@media only screen and (max-width: 576px){
+    .panel{
+        flex-direction: column;
+    }
+}
